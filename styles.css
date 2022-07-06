@@ -100,23 +100,29 @@ article {
 }
 .about {
     width: 70%;
-    border: 7px solid rgba(255, 255, 255, 0.2);
+    max-height: 100vh;
+    /* border: 7px solid rgba(255, 255, 255, 0.2); */
     transition: width 500ms cubic-bezier(.65,.05,.36,1), border 500ms cubic-bezier(.65,.05,.36,1);
     margin: auto;
     padding-top: 10%;
-    background-color: rgb(136, 131, 131);
+    background-color: rgb(93, 89, 89);
+    overflow: hidden;
 }
 .about-content {
     width: 90%;
+    height: 90%;
     display: flex;
     justify-content: space-between; 
+
 }
 .about-text {
+    min-width: 200px;
+    flex-basis: 50%;
     padding-left: 20px;
     line-height: 1.2;
     opacity: 0;
-    transform: translateY(150px);
-    transition: opacity 500ms cubic-bezier(.65,.05,.36,1) 300ms, transform 500ms cubic-bezier(.65,.05,.36,1) 200ms;
+    transform: translateX(-100%);
+    transition: opacity 10ms cubic-bezier(.65,.05,.36,1), transform 500ms cubic-bezier(.65,.05,.36,1);
 }
 .about img {
     object-fit: scale-down;

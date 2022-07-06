@@ -6,7 +6,7 @@ export function changeHeaderBackground() {
     const about = document.querySelector('.about');
     const education = document.querySelector('.education');
     const otherInterests = document.querySelector('.other-interests');
-    console.log(about.getBoundingClientRect().y)
+    // console.log(about.getBoundingClientRect().y)
     
     const options = {
         root: null,
@@ -18,8 +18,8 @@ export function changeHeaderBackground() {
     
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                console.log(entry);
-                console.log(entry.intersectionRatio);
+                // console.log(entry);
+                // console.log(entry.intersectionRatio);
                 let backgroundColor = window.getComputedStyle( entry.target ,null).getPropertyValue('background-color');
                 let color = window.getComputedStyle( entry.target ,null).getPropertyValue('color');
                 header.style.backgroundColor = backgroundColor;
