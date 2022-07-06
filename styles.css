@@ -132,8 +132,31 @@ article {
 
 
 .education {
-    background-color: rgb(169, 87, 87);
+    background-color: rgb(168, 91, 91);
     color: black;
+}
+.education ul li {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.animated-line {
+    width: 90%;
+    height: 4px;
+    background-color: darkgray;
+    transform: scaleX(0);
+    
+}
+.animated-line.active {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 700ms cubic-bezier(.65,.05,.36,1);
+    /* transform: scaleX(1); */
+    /* transform-origin: left; */
+}
+.tech-stack .title {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 @media all and (max-width: 1350px) {
