@@ -176,6 +176,10 @@ article {
     font-weight: bold;
 }
 
+.other-interests {
+    border: 1px solid white;
+}
+
 @media all and (max-width: 1350px) {
     .home {
         font-size: 7em;

@@ -1,11 +1,7 @@
 export function changeHeaderBackground() {
 
     const header = document.querySelector('header');
-    const main = document.querySelector('main');
-    const home = document.querySelector('.home');
-    const about = document.querySelector('.about');
-    const education = document.querySelector('.education');
-    const otherInterests = document.querySelector('.other-interests');
+    const articles = document.querySelectorAll('article');
     // console.log(about.getBoundingClientRect().y)
     
     const options = {
@@ -27,10 +23,10 @@ export function changeHeaderBackground() {
             }
         })
     }, options);
-    
-    observer.observe(home);
-    observer.observe(about);
-    observer.observe(education);
+
+    articles.forEach(article => {
+        observer.observe(article);
+    })
 }
 
 
