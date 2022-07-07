@@ -1,5 +1,6 @@
-export function educationAnimation() {
-    const animatedItems = document.querySelectorAll('.animated-line');
+export function animateHeadings() {
+    let headings = document.querySelectorAll('.heading');
+    console.log(headings)
 
     let options = {
 
@@ -8,14 +9,17 @@ export function educationAnimation() {
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log(entry.target)
                 entry.target.classList.add('active');
             } else {
                 entry.target.classList.remove('active');
-                
+
             }
-        });
-    }, options)
-    animatedItems.forEach(x => {
-        observer.observe(x)
+        })
+    }, options);
+
+    
+    headings.forEach(h => {
+        observer.observe(h);
     })
 }
