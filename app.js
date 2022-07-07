@@ -4,6 +4,7 @@ import { changeHeaderBackground } from "./page-animations/changeHeaderBackground
 import { educationAnimation } from "./page-animations/educationAnimation.js";
 import { animateHeadings } from "./page-animations/animateHeadings.js";
 import { imageAnimation } from "./page-animations/imageAnimation.js";
+import { sportAnimation } from "./page-animations/sportIconsAnimation.js";
 
 
 changeHeaderBackground();
@@ -12,4 +13,5 @@ aboutAnimation();
 educationAnimation();
 animateHeadings();
 imageAnimation();
+sportAnimation();
 

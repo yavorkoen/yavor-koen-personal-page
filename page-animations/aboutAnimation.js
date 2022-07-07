@@ -8,7 +8,6 @@ export const aboutAnimation = function () {
         threshold: 0
     };
 
-    // console.log(aboutPage.offsetTop);
     const aboutObserver = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {

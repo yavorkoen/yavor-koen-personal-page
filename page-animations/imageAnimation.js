@@ -10,8 +10,8 @@ export function imageAnimation() {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 let rotateAngle = 15 - 15 *(entry.intersectionRatio);
-                let position = 20 + entry.intersectionRatio * 100;
-                images[0].style.top = position + 'px';
+                let position = 70 - entry.intersectionRatio * 80;
+                images[0].style.transform = `translateY(${position}px)`
                 images[1].style.transform = `rotateZ(${rotateAngle}deg)`;
             }
         })
