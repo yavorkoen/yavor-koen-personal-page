@@ -229,6 +229,8 @@ article {
 }
 .travel-image {
     margin: 3%;
+    transform: scale(0.5);
+    transition: transform 600ms cubic-bezier(.65,.05,.36,1);
 }
 
 .travel-image figure{
