@@ -175,7 +175,7 @@ article {
 }
 
 .other-interests {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     background-color: rgb(23, 23, 23);
 }
 .heading-interests {
@@ -214,17 +214,24 @@ article {
 }
 #music-image-1 {
     /* position: absolute; */
-    transform: translateY(70px);
+    transform: translateY(100px);
 }
 #music-image-2 {
     /* position: absolute; */
-    top: 4%;
-    right: 2%;
     filter: brightness(0.55) sepia(0.4);
     transform: rotateZ(0deg);
+    transform-origin: top;
 }
 
+.travelling-media {
+    display: flex;
+    flex-wrap: wrap;
+}
 .travel-image {
+    margin: 3%;
+}
+
+.travel-image figure{
     width: 300px;
     height: 200px;
 }
@@ -262,7 +269,7 @@ article {
     }
   
     to {
-      transform: translateX(0);
+      transform: translateX(-110%);
     }
   }
 
