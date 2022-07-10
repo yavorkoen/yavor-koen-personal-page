@@ -8,7 +8,7 @@
 
 body {
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(23, 23, 23);
+    background-color: rgb(20, 20, 20);
     color: rgb(217, 212, 203); 
     height: 800vh;
     position: relative;
@@ -19,7 +19,8 @@ h1, h2 {
     margin-bottom: 20px;
 }
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
+    margin-bottom: 10%;
 }
 .heading {
     transform: translateY(50px);
@@ -91,7 +92,7 @@ header {
 
 .home {
     font-family: 'Major Mono Display', monospace;
-    font-size: 9em;
+    font-size: 10em;
     width: 100%;
     height: 70vh;
     padding: 10%;
@@ -100,7 +101,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(23, 23, 23);
+    background-color: rgb(20, 20, 20);
 
     /* border: 1px solid white; */
 }
@@ -116,13 +117,14 @@ article {
     padding: 10%;
 }
 .about {
-    width: 70%;
+    width: 100%;
     max-height: 100vh;
     /* border: 7px solid rgba(255, 255, 255, 0.2); */
-    transition: width 500ms cubic-bezier(.65,.05,.36,1), border 500ms cubic-bezier(.65,.05,.36,1);
+    transform: scale(0.7);
+    transition: transform 500ms cubic-bezier(.65,.05,.36,1), border 500ms cubic-bezier(.65,.05,.36,1);
     margin: auto;
     padding-top: 10%;
-    background-color: rgb(93, 89, 89);
+    background: rgb(44, 74, 111);
     overflow: hidden;
 }
 .about-content {
@@ -147,9 +149,14 @@ article {
     
 }
 .education {
-    background-color: rgb(168, 91, 91);
+    background: rgb(75, 136, 105);
     color: black;
 }
+.education section {
+    padding: 3%;
+    background:  rgb(53, 125, 88);
+}
+
 .education ul li {
     list-style-type: none;
     margin-bottom: 30px;
@@ -157,7 +164,7 @@ article {
 
 .animated-line {
     width: 90%;
-    height: 4px;
+    height: 2px;
     background-color: darkgray;
     transform: scaleX(0);
     
@@ -172,6 +179,7 @@ article {
 .tech-stack .title {
     font-size: 1.2em;
     font-weight: bold;
+    margin-bottom: 5%;
 }
 
 .other-interests {
@@ -187,14 +195,22 @@ article {
 .music {
     min-height: 60vh;
 }
-.music-media {
+.music-media-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.video, .image {
+.music-media {
+
+    box-sizing: content-box;
+    width: 300px;
+    padding: 5%;
+    background-color: rgb(43, 112, 89);
+}
+.video, .music-image {
     margin: 1em;
+    flex-basis: 50%;
 }
 .video iframe {
     display: block;
@@ -203,23 +219,27 @@ article {
     height: 200px;
 }
 
-.image {
+.music-image {
     width: 300px;
     height: 200px;
+    box-shadow: 0px 6px 9px 2px rgb(40, 40, 40);
 }
-.image img {
+.music-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 #music-image-1 {
     /* position: absolute; */
-    transform: translateY(100px);
+    transform: translateY(0px);
+    transform: rotateZ(-15deg);
+    transform-origin: center;
+
 }
 #music-image-2 {
     /* position: absolute; */
     filter: brightness(0.55) sepia(0.4);
-    transform: rotateZ(0deg);
+    transform: rotateZ(15deg);
     transform-origin: top;
 }
 
@@ -265,6 +285,12 @@ article {
     animation-iteration-count: infinite;
     animation-direction: normal;
 }
+
+.icons {
+    margin: 2em .5em;
+    color: rgb(217, 212, 203); 
+}
+
 @keyframes slideIcons {
     from {
       transform: translateX(30%);
@@ -276,10 +302,6 @@ article {
   }
 
 
-.icons {
-    margin: 2em 0;
-    color: rgb(217, 212, 203); 
-}
 
 @media all and (max-width: 1350px) {
     .home {
@@ -290,11 +312,17 @@ article {
     .home {
         font-size:5em;
     }
+    .sports-slide i {
+        font-size: 2.5em;
+    }
 }
 @media all and (max-width: 800px) {
     .home {
         font-size: 4em;
         flex-direction: column;
+    }
+    .sports-slide i {
+        font-size: 2em;
     }
 }
 
