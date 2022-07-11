@@ -12,11 +12,9 @@ body {
 }
 h1, h2 {
     padding: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 8%;
 }
-h1 {
-    margin-bottom: 10%;
-}
+
 .heading {
     transform: translateY(50px);
     opacity: 0;
@@ -57,6 +55,20 @@ header {
     list-style-type: none;
     justify-content: space-between;
 }
+.navigation.inactive > button {
+    position: relative;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.navigation.inactive {
+    display: none;
+    flex-basis: 30%;
+}
 
 .logo {
     flex-basis: 50%;
@@ -67,7 +79,7 @@ header {
     color: inherit;
     position: relative;
 }
-.menu a:after {
+.menu a:after, .navigation.inactive button:after {
     content: "";
     border-bottom: solid 1px rgb(140, 139, 128);;
     position: absolute;
@@ -78,7 +90,7 @@ header {
     transform-origin: right;
     transition: transform 300ms cubic-bezier(.65,.05,.36,1);
 }
-.menu a:hover::after {
+.menu a:hover::after,  .navigation.inactive button:hover::after  {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -136,8 +148,8 @@ article {
     /* padding-left: 20px; */
     
     opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 10ms cubic-bezier(.65,.05,.36,1), transform 500ms cubic-bezier(.65,.05,.36,1);
+    /* transform: translateX(-100%); */
+    /* transition: opacity 10ms cubic-bezier(.65,.05,.36,1), transform 500ms cubic-bezier(.65,.05,.36,1); */
 }
 .about img {
     object-fit: scale-down;
@@ -181,6 +193,12 @@ article {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 5%;
+}
+
+/* Projects Page */
+
+.projects {
+    height: 100vh;
 }
 
 /* Other Interests Page */
@@ -326,6 +344,12 @@ article {
     }
     .sports-slide i {
         font-size: 2em;
+    }
+    .navigation {
+        display: none;
+    }
+    .navigation.inactive {
+        display: block;
     }
 }
 
