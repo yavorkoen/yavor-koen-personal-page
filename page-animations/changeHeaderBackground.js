@@ -6,7 +6,7 @@ export function changeHeaderBackground() {
     const options = {
         root: null,
         rootMargin: '0% 0% -86% 0%',
-        threshold: 0.0
+        threshold: 0
     };
     
     const observer = new IntersectionObserver(function (entries, observer) {

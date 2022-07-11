@@ -1,8 +1,11 @@
 export function imageAnimation() {
+
     const musicImages = Array.from(document.querySelectorAll('.music-image'));
     const music = document.querySelector('.music');
     const travelImages = document.querySelectorAll('.travel-image');
 
+    const images = Array.from(document.querySelectorAll('.image'));
+    const otherInterests = document.querySelector('.other-interests');
 
     const options = {
         rootMargin: '-100px 0px 200px 0px',
@@ -18,13 +21,21 @@ export function imageAnimation() {
             }
         })
     }, options);
-    console.log(window.innerWidth)
-    // if(window.innerWidth > 1000) {
+   
 
-    //     musicImagesobserver.observe(music)
-    // }
+    let observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let rotateAngle = 15 - 15 * (entry.intersectionRatio * 5);
+                let position = 100 - entry.intersectionRatio * 200;
+                images[0].style.transform = `translateY(${position}px)`
+                images[1].style.transform = `rotateZ(${rotateAngle}deg)`;
+            }
+        })
+    }, options);
+    observer.observe(otherInterests);
 
- 
+
     let TravellingMediaObserver = new IntersectionObserver(function (entries, observer) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
