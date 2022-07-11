@@ -7,7 +7,7 @@
 body {
     background-color: rgb(20, 20, 20);
     color: rgb(217, 212, 203); 
-    height: 800vh;
+    /* height: 800vh; */
     position: relative;
 }
 h1, h2 {
@@ -29,18 +29,19 @@ h1, h2 {
 
 header {
     width: 100%;
-    padding: 2%;
+    padding: 1rem;
     position: fixed;
     top: 0;
     bottom: 87%;
     z-index: 3;
     /* background-color: rgb(23, 23, 23); */
+    border: 1px solid rgb(217, 212, 203);
     color: rgb(140, 139, 128);
     transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
     /* box-shadow: 0px 6px 9px 0px rgb(109, 109, 109); */
 }
 
-.menu {
+.menu-desktop, .menu-mobile {
     display: flex;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
@@ -48,14 +49,41 @@ header {
     letter-spacing: -0.5px;
     padding: 10px;
 }
-
-.navigation {
+.navigation, .navigation-main-mobile {
     width: 100%;
     display: flex;
     list-style-type: none;
+    align-items: center;
     justify-content: space-between;
 }
-.navigation.inactive > button {
+
+.logo {
+    flex-basis: 50%;
+    list-style-type: none;
+}
+
+.menu-mobile {
+    display: none;
+
+}
+
+.navigation-main-mobile {
+    display: flex;
+    position: relative;
+}
+
+.navigation-mobile {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border: 2px solid blue;
+}
+.navigation-mobile.active {
+    display: block;
+}
+
+.menu-button {
     position: relative;
     background: none;
 	color: inherit;
@@ -64,22 +92,13 @@ header {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-}
-.navigation.inactive {
-    display: none;
-    flex-basis: 30%;
-}
-
-.logo {
-    flex-basis: 50%;
-    list-style-type: none;
-}
-.menu a {
+} 
+.menu-desktop a, .menu-mobile a {
     text-decoration: none;
     color: inherit;
     position: relative;
 }
-.menu a:after, .navigation.inactive button:after {
+.menu-desktop a:after, .navigation.inactive button:after {
     content: "";
     border-bottom: solid 1px rgb(140, 139, 128);;
     position: absolute;
@@ -90,7 +109,7 @@ header {
     transform-origin: right;
     transition: transform 300ms cubic-bezier(.65,.05,.36,1);
 }
-.menu a:hover::after,  .navigation.inactive button:hover::after  {
+.menu-desktop a:hover::after,  .navigation.inactive button:hover::after  {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -298,8 +317,6 @@ article {
 .icon-container {
     display: flex;
     justify-content: space-around;
-    /* transform: translateX(110%); */
-    /* transition: transform 1000ms linear; */
     animation-name: slideIcons;
     animation-duration: 10s;
     animation-timing-function: ease-out;
@@ -336,6 +353,9 @@ article {
     .sports-slide i {
         font-size: 2.5em;
     }
+    .logo {
+        flex-basis: 30%;
+    }
 }
 @media all and (max-width: 800px) {
     .home {
@@ -345,11 +365,15 @@ article {
     .sports-slide i {
         font-size: 2em;
     }
-    .navigation {
+    .menu-desktop {
         display: none;
     }
-    .navigation.inactive {
+    .menu-mobile {
         display: block;
+    }
+    .navigation-main-mobile {
+        justify-content: space-around;
+
     }
 }
 

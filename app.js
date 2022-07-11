@@ -15,3 +15,10 @@ animateHeadings();
 imageAnimation();
 sportAnimation();
 
+
+const menuBtn = document.querySelector('.menu-button');
+const navigationMobile = document.querySelector('.navigation-mobile');
+menuBtn.addEventListener('click', (e) => {
+    navigationMobile.classList.toggle("active");
+})
+
