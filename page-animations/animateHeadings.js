@@ -1,10 +1,7 @@
 export function animateHeadings() {
     let headings = document.querySelectorAll('.heading');
 
-    let options = {
-
-    }
-
+    let options = {}
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
