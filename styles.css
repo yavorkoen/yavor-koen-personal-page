@@ -29,6 +29,7 @@ h1, h2 {
 
 header {
     width: 100%;
+    height: 4rem;
     padding: 1rem;
     position: fixed;
     top: 0;
@@ -36,7 +37,7 @@ header {
     z-index: 3;
     /* background-color: rgb(23, 23, 23); */
     border: 1px solid rgb(217, 212, 203);
-    color: rgb(140, 139, 128);
+    /* color: rgb(140, 139, 128); */
     transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
     /* box-shadow: 0px 6px 9px 0px rgb(109, 109, 109); */
 }
@@ -47,7 +48,6 @@ header {
     font-family: 'Montserrat', sans-serif;
     justify-content: space-between;
     letter-spacing: -0.5px;
-    padding: 10px;
 }
 .navigation, .navigation-main-mobile {
     width: 100%;
@@ -72,15 +72,21 @@ header {
     position: relative;
 }
 
+/* mobile navigation */
+
 .navigation-mobile {
     display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    border: 2px solid blue;
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    background: inherit;
 }
 .navigation-mobile.active {
     display: block;
+}
+.navigation-mobile li {
+    padding: 0.5rem;
+    list-style-type: none;
 }
 
 .menu-button {
@@ -93,14 +99,15 @@ header {
 	cursor: pointer;
 	outline: inherit;
 } 
-.menu-desktop a, .menu-mobile a {
+.link {
     text-decoration: none;
     color: inherit;
     position: relative;
 }
-.menu-desktop a:after, .navigation.inactive button:after {
+.link:after {
     content: "";
-    border-bottom: solid 1px rgb(140, 139, 128);;
+    border-bottom: solid 1px;
+    border-color: inherit;
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -109,7 +116,7 @@ header {
     transform-origin: right;
     transition: transform 300ms cubic-bezier(.65,.05,.36,1);
 }
-.menu-desktop a:hover::after,  .navigation.inactive button:hover::after  {
+.link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
