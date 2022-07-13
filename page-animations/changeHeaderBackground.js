@@ -13,8 +13,8 @@ export function changeHeaderBackground() {
     
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                let backgroundColor = window.getComputedStyle( entry.target ,null).getPropertyValue('background');
-                let color = window.getComputedStyle( entry.target ,null).getPropertyValue('color');
+                let backgroundColor = window.getComputedStyle(entry.target ,null).getPropertyValue('background');
+                let color = window.getComputedStyle(entry.target ,null).getPropertyValue('color');
                 header.style.background = backgroundColor;
                 header.style.color = color;
             }

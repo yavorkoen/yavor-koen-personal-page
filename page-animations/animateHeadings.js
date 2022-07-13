@@ -2,7 +2,7 @@ export function animateHeadings() {
     let headings = document.querySelectorAll('.heading');
 
     let options = {
-        threshold: 0.50
+        // threshold: 0.50
     }
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
@@ -10,7 +10,6 @@ export function animateHeadings() {
                 entry.target.classList.add('active');
             } else {
                 entry.target.classList.remove('active');
-
             }
         })
     }, options);

@@ -18,7 +18,6 @@ export const homeAnimation = function () {
                 intersectionsOne.set(null);
                 letters.forEach(l => {
                     l.style.transform = 'scale(1)';
-                    // observer.disconnect();
                 })
             }
             function changeLetters() {
