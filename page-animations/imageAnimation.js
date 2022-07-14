@@ -7,35 +7,21 @@ export function imageAnimation() {
     const images = Array.from(document.querySelectorAll('.image'));
     const otherInterests = document.querySelector('.other-interests');
 
-    const options = {
-        rootMargin: '-100px 0px 200px 0px',
-        threshold: thersholdGenerator()
-    }
-    let musicImagesobserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                let rotateAngle = 15 - 15 * (entry.intersectionRatio);
-                let position = 100 - entry.intersectionRatio * 100;
-                musicImages[0].style.transform = `translateY(${position}px)`
-                musicImages[1].style.transform = `rotateZ(${rotateAngle}deg)`;
-            }
-        })
-    }, options);
-   
-
-    // let observer = new IntersectionObserver(function (entries, observer) {
+    // const options = {
+    //     rootMargin: '-100px 0px 200px 0px',
+    //     threshold: thersholdGenerator()
+    // }
+    // let musicImagesobserver = new IntersectionObserver(function (entries, observer) {
     //     entries.forEach(entry => {
     //         if (entry.isIntersecting) {
-    //             let rotateAngle = 15 - 15 * (entry.intersectionRatio * 5);
-    //             let position = 100 - entry.intersectionRatio * 200;
-    //             images[0].style.transform = `translateY(${position}px)`
-    //             images[1].style.transform = `rotateZ(${rotateAngle}deg)`;
+    //             let rotateAngle = 15 - 15 * (entry.intersectionRatio);
+    //             let position = 100 - entry.intersectionRatio * 100;
+    //             musicImages[0].style.transform = `translateY(${position}px)`
+    //             musicImages[1].style.transform = `rotateZ(${rotateAngle}deg)`;
     //         }
     //     })
     // }, options);
-    // observer.observe(otherInterests);
-
-
+   
     let TravellingMediaObserver = new IntersectionObserver(function (entries, observer) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -48,7 +34,6 @@ export function imageAnimation() {
         threshold: 0.50
     });
     travelImages.forEach((image, index) => {
-        image.style.transitionDelay = 100 * index + 'ms';
         TravellingMediaObserver.observe(image);
     })
 

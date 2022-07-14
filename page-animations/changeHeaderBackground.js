@@ -5,7 +5,7 @@ export function changeHeaderBackground() {
     
     const options = {
         root: null,
-        rootMargin: '0% 0% -86% 0%',
+        rootMargin: '-10% 0% -90% 0%',
         threshold: 0
     };
     

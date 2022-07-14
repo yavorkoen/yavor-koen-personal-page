@@ -2,7 +2,9 @@ export function animateHeadings() {
     let headings = document.querySelectorAll('.heading');
 
     let options = {
-        // threshold: 0.50
+        root: null,
+        rootMargin: '10px 0px 10px 0px',
+        threshold: 0
     }
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
