@@ -15,7 +15,7 @@ export function sportAnimation() {
     }, {});
 
     observer.observe(icons);
-
+    
     balls.forEach((ball, index) => {
         ball.style.animationDelay = 300 * (index + 1) + 'ms';
     })

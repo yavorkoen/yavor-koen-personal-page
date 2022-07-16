@@ -6,22 +6,7 @@ export function imageAnimation() {
 
     const images = Array.from(document.querySelectorAll('.image'));
     const otherInterests = document.querySelector('.other-interests');
-
-    // const options = {
-    //     rootMargin: '-100px 0px 200px 0px',
-    //     threshold: thersholdGenerator()
-    // }
-    // let musicImagesobserver = new IntersectionObserver(function (entries, observer) {
-    //     entries.forEach(entry => {
-    //         if (entry.isIntersecting) {
-    //             let rotateAngle = 15 - 15 * (entry.intersectionRatio);
-    //             let position = 100 - entry.intersectionRatio * 100;
-    //             musicImages[0].style.transform = `translateY(${position}px)`
-    //             musicImages[1].style.transform = `rotateZ(${rotateAngle}deg)`;
-    //         }
-    //     })
-    // }, options);
-   
+    
     let TravellingMediaObserver = new IntersectionObserver(function (entries, observer) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
