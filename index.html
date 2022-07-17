@@ -39,9 +39,15 @@
     </header>
     <main>
         <article class="home" id="home">
-            <p><span>Y</span><span>A</span><span>V</span><span>O</span><span>R</span></p>
-            <p><span>K</span><span>O</span><span>E</span><span>N</span></p>
+            <div class="name-title">
+                <div class="first-name"><span>Y</span><span>A</span><span>V</span><span>O</span><span>R</span></div>
+                <div class="last-name"><span>K</span><span>O</span><span>E</span><span>N</span></div>
+            </div>
+            <div class="profession-title">
+                <h3>JavaScript Web Developer</h3>
+            </div>
         </article>
+
         <!-- About Page -->
         <article class="about" id="about">
             <div class="about-content">
@@ -129,24 +135,26 @@
 
         <!-- Projects -->
         <article class="projects" id="projects">
-            <h1 class="heading">Projects</h1>
-            <div class="projects-container">
-                <div class="links">
-                    <p class="project-name">SoftUni React Exam Project</p>
-                    <a class="link" href="https://github.com/yavorkoen/soundshare.git"
-                        target="_blank">https://github.com/yavorkoen/soundshare.git</a>
+            <section class="git-projects">
+                <h1 class="heading">Projects</h1>
+                <div class="projects-container">
+                    <div class="links">
+                        <p class="project-name">SoftUni React Exam Project</p>
+                        <a class="link" href="https://github.com/yavorkoen/soundshare.git"
+                            target="_blank">https://github.com/yavorkoen/soundshare.git</a>
+                    </div>
+                    <div class="links">
+                        <p class="project-name">REST API Project</p>
+                        <a class="link" href="https://github.com/yavorkoen/furniture-app.git"
+                            target="_blank">https://github.com/yavorkoen/furniture-app.git</a>
+                    </div>
+                    <div class="links">
+                        <p class="project-name">SoftUni Back-End Project</p>
+                        <a class="link" href="https://github.com/yavorkoen/cubicle.git"
+                            target="_blank">https://github.com/yavorkoen/cubicle.git</a>
+                    </div>
                 </div>
-                <div class="links">
-                    <p class="project-name">REST API Project</p>
-                    <a class="link" href="https://github.com/yavorkoen/furniture-app.git"
-                        target="_blank">https://github.com/yavorkoen/furniture-app.git</a>
-                </div>
-                <div class="links">
-                    <p class="project-name">SoftUni Back-End Project</p>
-                    <a class="link" href="https://github.com/yavorkoen/cubicle.git"
-                        target="_blank">https://github.com/yavorkoen/cubicle.git</a>
-                </div>
-            </div>
+            </section>
         </article>
         
         <!-- Other Interests -->
@@ -154,7 +162,6 @@
             <h1 class="heading" id="heading-interests">Other Interests</h1>
             <section class="music">
                 <h2 class="heading">Music</h2>
-
                 <div class="music-media-container">
                     <div class="music-media">
                         <div class="music-image" id="music-image-1">
@@ -168,7 +175,7 @@
                         </div>
                     </div>
 
-                    <div class="video">
+                    <div class="music-content">
                         <p class="text heading">Music has been an important part of my life. I love playing and listening to
                             jazz, fusion, reggae,
                             rock, classical and more. I am fond of synthesizer programming as well</p>
@@ -235,7 +242,7 @@
         </article>
     </main>
     <footer>
-
+        <p>Designed And Built by Yavor Koen</p>
     </footer>
 </body>
 

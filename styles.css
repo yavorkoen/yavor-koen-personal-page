@@ -9,7 +9,7 @@
 body {
     background-color: rgb(20, 20, 20);
     color: rgb(217, 212, 203);
-    position: relative;
+    position: relative; 
 }
 
 h1,
@@ -18,7 +18,7 @@ h2 {
 }
 
 .heading {
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
     transition: opacity 800ms ease-in-out, transform 600ms ease-in-out;
 }
@@ -156,16 +156,21 @@ header {
 
 .home {
     font-family: 'Major Mono Display', monospace;
-    font-size: 9em;
     width: 100%;
-    height: 70vh;
+    /* height: 80vh; */
     padding: 10%;
     text-align: center;
-    margin-top: 8%;
+    margin-top: 4rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(20, 20, 20);
+}
+.home .name-title {
+    font-size: 7rem;
+    display: flex;
+
 }
 
 .home>p:first-child {
@@ -175,11 +180,11 @@ header {
 .home span {
     display: inline-block;
     transform: scale(0.5);
-    transition: transform 600ms ease-in-out;
+    transition: transform 800ms ease-in-out;
 }
 
 article {
-    padding: 10%;
+    padding: 10%;   
 }
 
 /* About Page */
@@ -260,6 +265,19 @@ article {
     margin-bottom: 5%;
 }
 
+/* section {
+    position: relative;
+}
+.other-interests section:not(:last-child)::after, .projects section:after {
+    content: "";
+    width: 90%;
+    height: 0.5px;
+    background-color: white;
+    position: absolute;
+    left: 5%;
+    bottom: -4rem;
+} */
+
 /* Projects Page */
 
 .projects {
@@ -290,7 +308,6 @@ article {
 .projects .links {
     margin: 1rem 1rem 0  1rem;
     padding: 1rem;
-    /* background-color: rgb(55, 55, 55) */
 }
 .projects .links > p {
    margin-bottom: 1rem;
@@ -321,7 +338,7 @@ article {
 }
 
 .other-interests section {
-    margin-bottom: 5%;
+    margin-bottom: 8rem;
 }
 
 .music-media-container {
@@ -339,13 +356,20 @@ article {
     background-color: rgb(43, 112, 89);
 }
 
-.video,
+.music-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-content,
 .music-image {
     margin: 1em;
     flex-basis: 50%;
 }
 
-.video iframe {
+.music-content iframe {
     display: block;
     filter: opacity(0.6);
     max-width: 350px;
@@ -500,8 +524,11 @@ article {
 }
 
 @media all and (max-width: 1100px) {
-    .home {
+    .home .name-title {
         font-size: 5rem;
+    }
+    .home .profession-title h3 {
+        font-size: 1.3rem;
     }
 
     .sports-slide .icons {
@@ -523,10 +550,19 @@ article {
     html {
         font: 14px/1.4 Montserrat, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
 
-    .home {
-        font-size: 4em;
+    .home .name-title{
+        font-size: 4rem;
         flex-direction: column;
+    }
+    .home .profession-title h3{
+        font-size: 1rem;
     }
 
     article {
