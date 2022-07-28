@@ -505,23 +505,91 @@ article {
 
 /* Contacts */
 .contacts {
-    background-color: rgb(23, 23, 23);
+    /* background-color: rgb(23, 23, 23); */
     width: 100%;
     padding: 0;
 }
 .contacts-container {
+    display: flex;
+    flex-direction: column;
     color: inherit;
     background-color: rgb(8, 58, 64);
     width: 60%;
     padding: 10%;
     margin: auto;
-    border-radius: 50%;
-    transition: border-radius 600ms ease-in-out, width 600ms ease-in-out;
+    border-radius: 0 50% 0 50%;
+    transform: translateX(50%) translateY(-50%) scale(0.1);
+    transition: transform 600ms ease-out, border-radius 1200ms ease-out;
 }
-.email-address{
+
+.contacts-links {
+    margin-top: 20px;
+}
+.contacts-links a {
+    text-decoration: none;
+    padding: 0px 6px;
+    color:rgb(217, 212, 203);
+    font-size: 2rem;
+    
+}
+.email {
+    position: relative;
+    font-size: 1rem;
+    display: inline-block;
+}
+.circle {
+    width: 8rem;
+    height: 7rem;
+    position: absolute;
+    top: -50px;
+    border: 3px solid rgb(217, 212, 203);
+    padding: 10px;
+    border-radius: 50%;
+   
+}
+.email-address {
    letter-spacing: 2px;
-   text-decoration: underline;
    font-style: italic;
+   padding: 20px 0;
+   display: inline-block;
+   cursor: grab;
+}
+.email-address:after {
+    content: "";
+    border-bottom: solid 2px;
+    border-color: inherit;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 400ms cubic-bezier(.65, .05, .36, 1);
+}
+
+.email-address:hover::after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.clipboard-popup {
+    display: none;
+    background-color: black;
+    color: rgb(217, 212, 203);
+    font-size: 0.7rem;
+    border-radius: 8px;
+    padding: 10px 15px;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    transform: translateX(70%); 
+    
+}
+
+.email-address:hover + .clipboard-popup {
+    display: block; 
+}
+.email-address:active {
+    cursor: grabbing;
 }
 
 /* Footer */
@@ -536,6 +604,9 @@ footer {
     align-items: center;
     font-size: 0.7rem;
     font-style: italic;
+}
+footer p {
+    text-align: center;
 }
 
 /* Media Queries */

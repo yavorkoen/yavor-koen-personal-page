@@ -10,9 +10,9 @@ export const homeAnimation = function () {
         entries.forEach(entry => {
             if (entry.isIntersecting && intersections.get(entry.target) != null) {
                 clearInterval(intersections.get(entry.target));
-                intersections.set(entry.target, setInterval(changeLetters, 300));
+                intersections.set(entry.target, setInterval(changeLetters, 200));
             } else if (entry.isIntersecting) {
-                intersections.set(entry.target, setInterval(changeLetters, 300));
+                intersections.set(entry.target, setInterval(changeLetters, 200));
             } else if (!entry.isIntersecting && intersections.get(entry.target) != null) {
                 clearInterval(intersections.get(entry.target));
                 intersections.set(null);
