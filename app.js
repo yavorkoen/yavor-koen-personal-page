@@ -6,6 +6,7 @@ import { animateHeadings } from "./page-animations/animateHeadings.js";
 import { imageAnimation } from "./page-animations/imageAnimation.js";
 import { sportAnimation } from "./page-animations/sportIconsAnimation.js";
 import { showHideNavMobile } from "./page-animations/showHideNavMobile.js";
+import { contactsAnimation } from "./page-animations/contactsAnimation.js";
 
 
 changeHeaderBackground();
@@ -16,4 +17,5 @@ animateHeadings();
 imageAnimation();
 sportAnimation();
 showHideNavMobile();
+contactsAnimation();
 
