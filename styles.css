@@ -341,6 +341,7 @@ article {
 }
 
 .music-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -360,7 +361,7 @@ article {
     max-height: 225px;
 }
 
-.text {
+.music-content .text {
     margin: 4rem 0;
 }
 
@@ -715,3 +716,11 @@ footer p {
         font-size: 0.8rem;
     }
 }
+@media all and (max-width: 350px) {
+    .email {
+        font-size: 0.7rem;
+    }
+    .home .name-title {
+        font-size: 3.5rem;
+    }
+} 
