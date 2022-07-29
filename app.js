@@ -7,7 +7,7 @@ import { imageAnimation } from "./page-animations/imageAnimation.js";
 import { sportAnimation } from "./page-animations/sportIconsAnimation.js";
 import { showHideNavMobile } from "./page-animations/showHideNavMobile.js";
 import { contactsAnimation } from "./page-animations/contactsAnimation.js";
-import { mailCopyToClipboard } from "./page-animations/mailCopyToClipboard.js"
+import { mailCopyToClipboard } from "./page-animations/mailCopyToClipboard.js";
 
 
 changeHeaderBackground();
@@ -20,4 +20,5 @@ sportAnimation();
 showHideNavMobile();
 contactsAnimation();
 mailCopyToClipboard();
+
 

@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(23, 23, 23);
     color: rgb(217, 212, 203);
     position: relative; 
 }
@@ -169,7 +169,7 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(23, 23, 23);
 }
 .home .name-title {
     font-size: 7rem;
@@ -264,6 +264,7 @@ article {
 /* Projects Page */
 
 .projects {
+    width: 100vw;
     min-height: 70vh;
     background: rgb(23, 23, 23);
 }
@@ -504,8 +505,8 @@ article {
 }
 
 /* Contacts */
+
 .contacts {
-    /* background-color: rgb(23, 23, 23); */
     width: 100%;
     padding: 0;
 }
@@ -520,76 +521,91 @@ article {
     border-radius: 0 50% 0 50%;
     transform: translateX(50%) translateY(-50%) scale(0.1);
     transition: transform 600ms ease-out, border-radius 1200ms ease-out;
+    animation: fluidBox 3000ms ease-in-out alternate infinite 300ms; 
 }
 
 .contacts-links {
     margin-top: 20px;
 }
 .contacts-links a {
+    position: relative;
     text-decoration: none;
-    padding: 0px 6px;
+    margin: 0px 6px;
     color:rgb(217, 212, 203);
     font-size: 2rem;
     
 }
 .email {
     position: relative;
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: inline-block;
 }
-.circle {
-    width: 8rem;
-    height: 7rem;
-    position: absolute;
-    top: -50px;
-    border: 3px solid rgb(217, 212, 203);
-    padding: 10px;
-    border-radius: 50%;
-   
-}
 .email-address {
-   letter-spacing: 2px;
-   font-style: italic;
-   padding: 20px 0;
+   letter-spacing: -1px;
+   margin: 20px 0;
    display: inline-block;
    cursor: grab;
 }
-.email-address:after {
+.email-address:after, .contacts-links a:after {
     content: "";
     border-bottom: solid 2px;
     border-color: inherit;
     position: absolute;
-    bottom: 14px;
+    bottom: 0px;
     left: 0;
     width: 100%;
-    transform: scaleX(1);
-    transform-origin: left;
+    transform: scaleX(0);
+    transform-origin: right;
     transition: transform 400ms cubic-bezier(.65, .05, .36, 1);
 }
 
-.email-address:hover::after {
-    transform: scaleX(0);
-    transform-origin: right;
+.email-address:hover::after, .contacts-links a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
 }
 .clipboard-popup {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     background-color: black;
     color: rgb(217, 212, 203);
     font-size: 0.7rem;
-    border-radius: 8px;
+    border-radius: 8px 8px 8px 0px;
     padding: 10px 15px;
     position: absolute;
-    top: -35px;
-    right: 0;
-    transform: translateX(70%); 
+    top: -20px;
+    left: 30px;
+    /* transform: translateX(30%);  */
+    transition: visibility .2s, opacity .2s ease-in-out;
     
 }
-
 .email-address:hover + .clipboard-popup {
-    display: block; 
+    visibility: visible; 
+    opacity: 1;
 }
 .email-address:active {
     cursor: grabbing;
+}
+.email-address span {
+    display: inline-block;
+    animation: flip 3s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes fluidBox {
+    from {
+        border-radius: 0 50% 0 50%;
+    }
+    to {
+        border-radius: 50% 0 50% 0;
+    }
+}
+
+@keyframes flip {
+   0%, 50% {
+    transform:rotateY(360deg);
+  
+   }
+  
+    
 }
 
 /* Footer */
@@ -653,8 +669,6 @@ footer p {
     html {
         font: 87.5%/1.4 Montserrat, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-   
-
     .home .name-title{
         font-size: 4.5rem;
         flex-direction: column;
@@ -693,5 +707,8 @@ footer p {
     .navigation-main-mobile {
         justify-content: space-around;
 
+    }
+    .email {
+        font-size: 0.8rem;
     }
 }
