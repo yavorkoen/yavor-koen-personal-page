@@ -663,6 +663,9 @@ footer p {
         height: auto;
         margin: auto;
     }
+    .email {
+        font-size: 1.2rem;
+    }
 }
 
 @media all and (max-width: 815px) {
