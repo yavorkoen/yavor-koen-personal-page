@@ -332,12 +332,14 @@ article {
     align-items: center;
 }
 
-.music-media {
+.music-images {
 
     box-sizing: content-box;
     width: 300px;
     padding: 1rem;
     background-color: rgb(43, 112, 89);
+    border-radius: 7px;
+
 }
 
 .music-content {

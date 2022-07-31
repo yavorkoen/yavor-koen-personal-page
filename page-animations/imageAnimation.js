@@ -1,11 +1,11 @@
 export function imageAnimation() {
 
-    const musicImages = Array.from(document.querySelectorAll('.music-image'));
-    const music = document.querySelector('.music');
+    const musicImages = document.querySelector('.music-images');
+    // const music = document.querySelector('.music');
     const travelImages = document.querySelectorAll('.travel-image');
 
-    const images = Array.from(document.querySelectorAll('.image'));
-    const otherInterests = document.querySelector('.other-interests');
+    // const images = Array.from(document.querySelectorAll('.image'));
+    // const otherInterests = document.querySelector('.other-interests');
     
     let TravellingMediaObserver = new IntersectionObserver(function (entries, observer) {
         entries.forEach((entry) => {
@@ -22,9 +22,22 @@ export function imageAnimation() {
         TravellingMediaObserver.observe(image);
     })
 
+    let musicImagesOptions = {
+        threshold: thresholdGenerator()
+    }
+
+    let musicImagesObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    console.log(entry.intersectionRatio)
+                    entry.target.style.transform = `translateY(${entry.intersectionRatio*150}px)`
+                }
+            })
+    }, musicImagesOptions)
+    musicImagesObserver.observe(musicImages);
 }
 
-function thersholdGenerator() {
+function thresholdGenerator() {
     let thresholds = [];
     for (let i = 0; i <= 1; i += 0.01) {
         thresholds.push(i.toFixed(2));
