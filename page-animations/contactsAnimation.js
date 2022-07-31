@@ -9,7 +9,7 @@ export function contactsAnimation() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 contacts.style.transform = 'translateX(0) translateY(0) scale(1)';
-                contacts.style.borderRadius = '50% 0 50% 0';
+                // contacts.style.borderRadius = '50% 0 50% 0';
                 observer.disconnect();
             }
         })
