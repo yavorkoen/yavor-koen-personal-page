@@ -1,12 +1,8 @@
 export function imageAnimation() {
 
     const musicImages = document.querySelector('.music-images');
-    // const music = document.querySelector('.music');
     const travelImages = document.querySelectorAll('.travel-image');
 
-    // const images = Array.from(document.querySelectorAll('.image'));
-    // const otherInterests = document.querySelector('.other-interests');
-    
     let TravellingMediaObserver = new IntersectionObserver(function (entries, observer) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -29,7 +25,6 @@ export function imageAnimation() {
     let musicImagesObserver = new IntersectionObserver(function(entries, observer) {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
-                    console.log(entry.intersectionRatio)
                     entry.target.style.transform = `translateY(${entry.intersectionRatio*150}px)`
                 }
             })
