@@ -139,7 +139,7 @@ header {
     outline: inherit;
 }
 
-.link {
+.link, .mobile-link {
     text-decoration: none;
     color: inherit;
     position: relative;
@@ -333,7 +333,7 @@ article {
     margin-bottom: 5%;
 }
 
-.other-interests section {
+.other-interests section:not(:last-child) {
     margin-bottom: 8rem;
 }
 
@@ -538,7 +538,10 @@ article {
 
 .contacts {
     width: 100%;
+    min-height: 100vh;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 .contacts-container {
     width: 70%;
