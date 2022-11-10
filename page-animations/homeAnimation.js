@@ -20,9 +20,9 @@ export const homeAnimation = function () {
             function changeLetters() {
                 for (let i = 0; i < Math.floor(Math.random() * 20); i++) {
                     if (i < 9) {
-                        letters[i].style.transform = 'scale(1.2)';
+                        letters[i].style.transform = 'scale(1.1)';
                         if(i == 3 || i == 6) {
-                            letters[i].style.transform = 'scale(1.2) rotate(180deg)';
+                            letters[i].style.transform = 'scale(1.1) rotate(180deg)';
                         }
                     }
                 }

@@ -49,7 +49,6 @@ header {
     display: flex;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    justify-content: space-between;
     letter-spacing: -0.5px;
 }
 
@@ -67,10 +66,12 @@ header {
     list-style-type: none;
 }
 
+/* Mobile Navigation */
+
 .menu-mobile {
     background: inherit;
     display: none;
-
+    padding-top: 2%;
 }
 
 .navigation-main-mobile {
@@ -79,7 +80,14 @@ header {
     background: inherit;
 }
 
-/* Mobile Navigation */
+
+.burger-menu {
+    width: 15px;
+    height: 1px;
+    margin-bottom: 4px;
+    background: inhreit;
+    transition: transform 1s ease;
+}
 
 .navigation-mobile {
     position: fixed;
@@ -129,6 +137,9 @@ header {
 }
 
 .menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     position: relative;
     background: none;
     color: inherit;
@@ -607,7 +618,6 @@ article {
     position: absolute;
     top: -20px;
     left: 30px;
-    /* transform: translateX(30%);  */
     transition: visibility .2s, opacity .2s ease-in-out;
     
 }
@@ -690,7 +700,7 @@ footer p {
     .logo {
         flex-basis: 30%;
     }
-
+    
     .travel-image figure {
         width: 70%;
         height: auto;
@@ -702,6 +712,7 @@ footer p {
 }
 
 @media all and (max-width: 815px) {
+    
     html {
         font: 87.5%/1.4 Montserrat, Cochin, Georgia, Times, 'Times New Roman', serif;
     }

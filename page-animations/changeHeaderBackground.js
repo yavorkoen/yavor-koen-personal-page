@@ -2,6 +2,7 @@ export function changeHeaderBackground() {
 
     const header = document.querySelector('header');
     const articles = document.querySelectorAll('article');
+    const burgerMenuLines = document.querySelectorAll('.burger-menu');
     
     const options = {
         root: null,
@@ -17,6 +18,8 @@ export function changeHeaderBackground() {
                 let color = window.getComputedStyle(entry.target ,null).getPropertyValue('color');
                 header.style.background = backgroundColor;
                 header.style.color = color;
+                burgerMenuLines.forEach(l => l.style.background = color);
+                
             }
         })
     }, options);
