@@ -221,11 +221,6 @@ article {
     overflow: hidden;
 }
 
-.about-content {
-    width: 90%;
-    height: 90%;
-}
-
 .about-text {
     min-width: 200px;
     flex-basis: 50%;
@@ -233,15 +228,18 @@ article {
 }
 
 .about-text p {
-    text-indent: 2rem;
+    text-indent: 1rem;
+    line-height: 1.7;
 }
 
 .about img {
+    width: 40%;
     object-fit: scale-down;
     object-position: top;
     padding-right: 4%;
     padding-bottom: 2.7%;
     float: left;
+    filter: opacity(0.9);
 
 }
 
@@ -432,7 +430,6 @@ article {
 }
 
 .travel-image img {
-    /* box-shadow: 0px 2px 4px 2px rgb(164, 164, 164); */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -450,10 +447,6 @@ article {
 .sports-slide {
 
     padding: 1rem;
-
-    /* width: 60%;
-    height: 400px; */
-
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     overflow: hidden;
@@ -706,6 +699,9 @@ footer p {
     .logo {
         flex-basis: 30%;
     }
+    .about img {
+        width: 50%;
+    }
     
     .travel-image figure {
         width: 70%;
@@ -740,6 +736,12 @@ footer p {
     article {
         padding: 4%;
     }
+    .about img {
+        float: none;
+        display: block;
+        width: 60%;
+        margin: auto;
+    }
 
     .sports-slide .icons {
         font-size: 2rem;
@@ -772,5 +774,8 @@ footer p {
     }
     .home .name-title {
         font-size: 3.5rem;
+    }
+    .about img {
+        width: 90%;
     }
 } 
