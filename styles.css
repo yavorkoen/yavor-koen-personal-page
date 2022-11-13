@@ -74,13 +74,6 @@ header {
     padding-top: 2%;
 }
 
-.navigation-main-mobile {
-    display: flex;
-    position: relative;
-    background: inherit;
-}
-
-
 .burger-menu {
     width: 15px;
     height: 1px;
@@ -169,8 +162,6 @@ header {
     transform-origin: right;
     transition: transform 300ms cubic-bezier(.65, .05, .36, 1);
 }
-
-
 
 article {
     width: 100%;  
