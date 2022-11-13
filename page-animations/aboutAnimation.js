@@ -12,7 +12,7 @@ export const aboutAnimation = function () {
             if(entry.isIntersecting) {
                 entry.target.style.transform = 'scale(100%)';
                 aboutText.style.opacity = '1';
-                aboutText.style.transform = 'translateX(0%)'
+                aboutText.style.transform = 'translateX(0%)';
             } else {
                 entry.target.style.transform = 'scale(70%)';
                 aboutText.style.opacity = '0';

@@ -154,6 +154,7 @@ header {
     text-decoration: none;
     color: inherit;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .link:after {
@@ -169,10 +170,7 @@ header {
     transition: transform 300ms cubic-bezier(.65, .05, .36, 1);
 }
 
-.link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
+
 
 article {
     width: 100%;  
@@ -217,7 +215,7 @@ article {
 .about {
     min-height: 100vh;
     transform: scale(0.7);
-    transition: transform 500ms cubic-bezier(.65, .05, .36, 1), border 500ms cubic-bezier(.65, .05, .36, 1);
+    transition: transform .5s cubic-bezier(.65, .05, .36, 1), border 500ms cubic-bezier(.65, .05, .36, 1);
     margin: auto;
     background: rgb(22, 32, 54);
     overflow: hidden;
@@ -327,9 +325,7 @@ article {
 .projects .link  {
    font-style: italic;
 }
-.projects .link:hover{
-    color: rgb(194, 194, 89);
-}
+
 
 
 
@@ -603,10 +599,7 @@ article {
     transition: transform 400ms cubic-bezier(.65, .05, .36, 1);
 }
 
-.email-address:hover::after, .contacts-links a:hover::after{
-    transform: scaleX(1);
-    transform-origin: left;
-}
+
 .clipboard-popup {
     visibility: hidden;
     opacity: 0;
@@ -621,10 +614,7 @@ article {
     transition: visibility .2s, opacity .2s ease-in-out;
     
 }
-.email-address:hover + .clipboard-popup {
-    visibility: visible; 
-    opacity: 1;
-}
+
 .email-address:active {
     cursor: grabbing;
 }
@@ -646,9 +636,11 @@ article {
    0%, 50% {
     transform:rotateY(360deg);
   
-   }
-  
-    
+   }   
+}
+.email-address:hover + .clipboard-popup {
+    visibility: visible; 
+    opacity: 1;
 }
 
 /* Footer */
@@ -669,6 +661,20 @@ footer p {
 }
 
 /* Media Queries */
+
+@media(hover: hover) {
+    .email-address:hover::after, .contacts-links a:hover::after{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    .projects .link:hover{
+        color: rgb(194, 194, 89);
+    }
+    .link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
 
 @media all and (max-width: 1350px) {
     .home .name-title {
@@ -709,6 +715,7 @@ footer p {
     .email {
         font-size: 1.2rem;
     }
+
 }
 
 @media all and (max-width: 815px) {
