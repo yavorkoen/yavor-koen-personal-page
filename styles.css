@@ -199,7 +199,7 @@ article {
     display: inline-block;
     transform: scale(0.7);
     transform-origin: 50% 54%;
-    transition: transform 800ms ease-in-out;
+    transition: transform 600ms ease-in-out;
 }
 
 /* About Page */
