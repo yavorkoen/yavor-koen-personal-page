@@ -168,9 +168,6 @@ article {
     padding: 10%;
 }
 
-.empty-div {
-    height: 8vh;
-}
 
 /* Home */
 
@@ -318,10 +315,6 @@ article {
 .projects .link  {
    font-style: italic;
 }
-
-
-
-
 
 /* Other Interests Page */
 
@@ -720,6 +713,9 @@ footer p {
     }
     .home .profession-title h3{
         font-size: 1rem;
+    }
+    .empty-div {
+        height: 8vh;
     }
     h1 {
         font-size: 2rem;
