@@ -168,6 +168,10 @@ article {
     padding: 10%;
 }
 
+.empty-div {
+    height: 8vh;
+}
+
 /* Home */
 
 .home {
